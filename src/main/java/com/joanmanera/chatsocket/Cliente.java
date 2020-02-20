@@ -11,7 +11,7 @@ public class Cliente {
     public Cliente(){
         try {
             Socket socket = new Socket("192.168.1.71", 9990);
-            Mensaje mensaje = new Mensaje("yo", "tu", "hola mundo");
+            Mensaje mensaje = new Mensaje("yo", "tu", "hola mundo", false);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.writeObject(mensaje);
 
